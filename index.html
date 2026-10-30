@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Siva Sankar S – Full-Stack Developer</title>
+<meta name="description" content="Full-stack MERN developer building real-time, GPS-enabled and QR-based apps. Open to Software Developer roles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2F5F7;--sf:#fff;--ink:#13222D;--mut:#51636F;--line:#D5DEE4;--sig:#D62F3A;--rt:#0E7C86;--on:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1A22;--sf:#17252F;--ink:#E8EEF2;--mut:#9FB0BB;--line:#2A3B47;--sig:#FF6B73;--rt:#4CC3CC;--on:#0F1A22;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1A22;--sf:#17252F;--ink:#E8EEF2;--mut:#9FB0BB;--line:#2A3B47;--sig:#FF6B73;--rt:#4CC3CC;--on:#0F1A22;color-scheme:dark}
+html{scroll-padding-top:70px;scroll-behavior:smooth}*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}:focus-visible{outline:3px solid var(--rt);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header.bar{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;height:58px}
+.logo{font:800 1.1rem "Bricolage Grotesque",sans-serif;text-decoration:none}
+nav{display:flex;gap:18px;align-items:center;font-weight:500;font-size:.95rem}
+nav a{text-decoration:none;color:var(--mut)}nav a:hover{color:var(--ink)}
+#pg{position:absolute;left:0;bottom:-1px;height:3px;width:0;background:var(--sig)}
+.tg{background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer;font:inherit}
+.hero{padding:64px 0 48px}
+.kick{display:inline-flex;gap:8px;align-items:center;font-weight:500;color:var(--rt);margin-bottom:14px}
+.kick i{width:9px;height:9px;border-radius:50%;background:var(--sig);animation:pl 1.8s infinite}
+@keyframes pl{50%{opacity:.3}}
+h1{font-size:clamp(2.8rem,8vw,5.4rem);font-weight:800;letter-spacing:-.03em}
+.role{font:700 clamp(1.3rem,3.4vw,2rem) "Bricolage Grotesque",sans-serif;color:var(--rt);min-height:1.3em;margin:12px 0}
+.role::after{content:"";display:inline-block;width:3px;height:1em;background:var(--sig);margin-left:4px;vertical-align:-.12em}
+.hero p{max-width:56ch;color:var(--mut);font-size:1.12rem}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{padding:12px 20px;border-radius:8px;font-weight:500;text-decoration:none;border:1.5px solid var(--ink)}
+.btn.m{background:var(--ink);color:var(--bg)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.stats div{background:var(--sf);border:1px solid var(--line);border-radius:12px;padding:16px}
+.stats b{display:block;font:800 2.2rem "Bricolage Grotesque",sans-serif}
+.stats span{color:var(--mut);font-size:.92rem}
+section{padding:60px 0;border-top:1px solid var(--line)}
+h2{font-size:2.1rem;font-weight:700;margin-bottom:8px}.sub{color:var(--mut);margin:0 0 26px;max-width:62ch}
+.sim{display:grid;grid-template-columns:1.6fr 1fr;gap:18px}
+.map{background:var(--sf);border:1px solid var(--line);border-radius:14px;padding:8px}
+.map svg{width:100%;height:auto;display:block;cursor:crosshair;touch-action:manipulation}
+.side{background:var(--sf);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.side button{font:inherit;font-weight:500;padding:9px 12px;border-radius:8px;border:1.5px solid var(--ink);background:none;color:var(--ink);cursor:pointer}
+.side button.m{background:var(--ink);color:var(--bg)}
+#log{list-style:none;margin:0;padding:0;font-size:.93rem;color:var(--mut);display:grid;gap:6px}
+#log li:first-child{color:var(--ink);font-weight:500}
+.proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.card{background:var(--sf);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);border-color:var(--rt)}
+.card h3{font-size:1.35rem}.tag{color:var(--sig);font-weight:500;font-size:.88rem}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{border:1px solid var(--line);border-radius:99px;padding:2px 11px;font-size:.85rem;color:var(--mut)}
+.card ul{margin:0;padding-left:19px;color:var(--mut)}.lk{display:flex;gap:16px;font-weight:500}.lk a{color:var(--rt)}
+details{border-top:1px solid var(--line);padding-top:10px;font-size:.95rem;color:var(--mut)}
+summary{cursor:pointer;font-weight:500;color:var(--rt)}
+.flow{font-family:ui-monospace,Menlo,monospace;font-size:.85rem;margin:8px 0 0}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.why div{border-left:3px solid var(--sig);padding:4px 0 4px 16px}
+.why h3{font-size:1.1rem;margin-bottom:4px}.why p{margin:0;color:var(--mut);font-size:.97rem}
+.tl{border-left:2px solid var(--line);margin-left:6px;padding-left:22px;display:grid;gap:22px}
+.tl b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem}.tl small{color:var(--rt);font-weight:500;display:block}
+.tl span{color:var(--mut)}
+.cta{background:var(--ink);color:var(--bg);border-radius:18px;padding:36px;text-align:center}
+.cta h2{margin-bottom:10px}.cta p{max-width:50ch;margin:0 auto 20px;opacity:.85}
+.cta .btn{border-color:var(--bg);color:var(--bg);margin:4px}.cta .btn.m{background:var(--bg);color:var(--ink)}button.btn{background:none;font:inherit;font-weight:500;cursor:pointer}
+footer{padding:26px 0 50px;color:var(--mut);font-size:.9rem}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}.js .rv.in{opacity:1;transform:none}
+@media(max-width:760px){.sim{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}nav a{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap"><a class="logo" href="#top">SS<span style="color:var(--sig)">.</span></a>
+<nav aria-label="Sections"><a href="#demo">Live demo</a><a href="#projects">Projects</a><a href="#why">Why me</a><a href="#internship">Internship</a><a href="#certifications">Certifications</a><button class="tg" id="tg" aria-label="Toggle dark mode">◐</button><a href="#contact" style="display:inline;color:var(--ink)">Hire me</a></nav></div><div id="pg"></div></header>
+<main id="top" class="wrap">
+<div class="hero">
+<div class="kick"><i></i>Open to Software Developer roles</div>
+<h1>Siva Sankar S</h1>
+<div class="role" id="role" aria-live="off">Full-Stack Developer</div>
+<p>I build real-time, GPS-enabled and QR-based apps with the MERN stack, and I ship them from database to UI. Final-year Computer Science student at Hindusthan College of Engineering and Technology, based in Coimbatore.</p>
+<div class="btns"><a class="btn m" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=sivasankar142810@gmail.com&amp;su=Work%20opportunity%20for%20Siva%20Sankar%20S&amp;body=Hi%20Siva%2C%20I%20would%20like%20to%20discuss%20a%20role%20with%20you." target="_blank" rel="noopener">Email me for work</a><a class="btn" href="https://www.linkedin.com/in/siva-sankar-s-312356300" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/SIVASANKARS10" rel="noopener">GitHub</a></div>
+<div class="stats">
+<div class="rv"><b data-n="8" data-d="2">0</b><span>CGPA, B.E. CSE</span></div>
+<div class="rv"><b data-n="4">0</b><span>projects built, 1 live website</span></div>
+<div class="rv"><b>SIH ’25</b><span>Smart India Hackathon</span></div>
+<div class="rv"><b data-n="4">0</b><span>certifications</span></div>
+</div></div>
+
+<section id="demo"><h2 class="rv">Try it: ambulance dispatch</h2>
+<p class="sub rv">A small browser simulation of the idea behind my SIH project: pick an emergency location and the nearest free ambulance is assigned and sent. Click the map, or use the button.</p>
+<div class="sim rv">
+<div class="map"><svg id="sim" viewBox="0 0 480 300" role="img" aria-label="Dispatch map. Click to place an emergency."></svg></div>
+<div class="side"><button class="m" id="rnd">Random emergency</button><button id="rst">Reset units</button>
+<div style="font-weight:500">Dispatch log</div><ul id="log"><li>Click the map to report an emergency.</li></ul>
+<small style="color:var(--mut)">Simulation for illustration. The real app uses live GPS and Socket.IO.</small></div></div></section>
+
+<section id="projects"><h2 class="rv">Projects</h2><p class="sub rv">Each one is a complete product: UI, API and database.</p>
+<div class="proj">
+<article class="card rv"><div class="tag">Smart India Hackathon 2025</div><h3>Ambulance GPS Tracker</h3>
+<ul><li>Live GPS location updates for continuous movement monitoring.</li><li>Automatic ambulance assignment to speed up dispatch and cut response time.</li><li>Socket.IO for low-latency, two-way communication.</li></ul>
+<div class="chips"><span>React Native</span><span>Node.js</span><span>Express</span><span>Socket.IO</span><span>MongoDB Atlas</span></div>
+<details><summary>Under the hood</summary><div class="flow">Mobile clients ⇄ Socket.IO server ⇄ MongoDB Atlas</div></details></article>
+<article class="card rv"><div class="tag">Live website · Coimbatore café</div><h3>Leo Das Café Website</h3>
+<ul><li>Responsive café website with menu categories, gallery, testimonials, opening hours and contact sections.</li><li>Tap-to-order menu with prices, designed to attract and convert visitors.</li><li>Deployed live, with the full source code on GitHub.</li></ul>
+<div class="chips"><span>React</span><span>TypeScript</span><span>Vite</span><span>Supabase</span></div>
+<details><summary>Under the hood</summary><div class="flow">TypeScript + Vite front end · Supabase integration</div></details>
+<div class="lk"><a href="https://aroma-chic-site.lovable.app/" rel="noopener">Live site ↗</a><a href="https://github.com/SIVASANKARS10/Mini_Cafe" rel="noopener">Source code ↗</a></div></article>
+<article class="card rv"><div class="tag">Event and ticket booking</div><h3>Daily News Events</h3>
+<ul><li>Users browse events and book tickets online.</li><li>QR code e-tickets with real-time validation for secure entry.</li></ul>
+<div class="chips"><span>React (Vite)</span><span>Node.js</span><span>Express</span><span>MongoDB</span></div>
+<details><summary>Under the hood</summary><div class="flow">Book → QR e-ticket → scan at entry → validate</div></details></article>
+<article class="card rv"><div class="tag">Event management</div><h3>Event Booking System</h3>
+<ul><li>Browse and book events, with QR code entry authentication.</li><li>Responsive UI and RESTful backend for end-to-end registration.</li></ul>
+<div class="chips"><span>React (Vite)</span><span>Node.js</span><span>MongoDB</span><span>REST</span></div>
+<details><summary>Under the hood</summary><div class="flow">React UI → REST API → MongoDB</div></details></article>
+</div></section>
+
+<section id="why"><h2 class="rv">Why interview me</h2><p class="sub rv">What I bring to a team from day one.</p>
+<div class="why">
+<div class="rv"><h3>I ship end to end</h3><p>React front ends, Node and Express APIs, MongoDB schemas, all built and deployed by me.</p></div>
+<div class="rv"><h3>Real-time experience</h3><p>Live GPS and WebSocket communication, which most student portfolios don’t have.</p></div>
+<div class="rv"><h3>Works under pressure</h3><p>Built and presented a working product at Smart India Hackathon 2025.</p></div>
+<div class="rv"><h3>Strong fundamentals</h3><p>Data structures, OOP, databases and REST design in Java, Python, JavaScript and SQL.</p></div>
+</div>
+<div class="chips rv" style="margin-top:26px"><span>Java</span><span>Python</span><span>JavaScript</span><span>SQL</span><span>React.js</span><span>React Native</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>Socket.IO</span><span>REST APIs</span><span>TypeScript</span><span>Supabase</span><span>Bootstrap</span><span>GitHub</span></div></section>
+
+<section id="internship"><h2 class="rv">Internship</h2><p class="sub"></p>
+<div class="tl">
+<div class="rv"><small>April 2025</small><b>Full Stack Development Intern, Career Ladder</b><br><span>One-month MERN internship: React interfaces, Node.js and Express services, REST integration and MongoDB schema design.</span></div>
+</div></section>
+<section id="education"><h2 class="rv">Education</h2><p class="sub"></p>
+<div class="tl">
+<div class="rv"><small>2023 – 2027</small><b>B.E. Computer Science and Engineering</b><br><span>Hindusthan College of Engineering and Technology · CGPA 8.00</span></div>
+</div></section>
+<section id="certifications"><h2 class="rv">Certifications</h2><p class="sub">Learning I completed alongside my projects.</p>
+<div class="proj">
+<article class="card rv"><div class="tag">Future Interns · May 2026</div><h3>Full Stack Web Development</h3><span style="color:var(--mut);font-size:.9rem">Credential ID FIT/APR26/FS14810</span></article>
+<article class="card rv"><div class="tag">NPTEL · Elite grade</div><h3>Cloud Computing</h3></article>
+<article class="card rv"><div class="tag">NPTEL</div><h3>Cyber Security and Privacy</h3></article>
+<article class="card rv"><div class="tag">Deloitte</div><h3>Technology Job Simulation</h3></article>
+</div></section>
+
+<section id="contact"><div class="cta rv"><h2>Let’s talk about the role</h2><p>I’m ready for an interview and can start a conversation or a technical round whenever suits you.</p>
+<a class="btn m" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=sivasankar142810@gmail.com&amp;su=Work%20opportunity%20for%20Siva%20Sankar%20S&amp;body=Hi%20Siva%2C%20I%20would%20like%20to%20discuss%20a%20role%20with%20you." target="_blank" rel="noopener">Email me for work</a><a class="btn" target="_blank" rel="noopener" href="tel:+919345393446">+91 93453 93446</a><a class="btn" href="https://www.linkedin.com/in/siva-sankar-s-312356300" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/SIVASANKARS10" rel="noopener">GitHub</a></div></section>
+<footer>© 2026 Siva Sankar S · Coimbatore, Tamil Nadu</footer>
+</main>
+<script>
+document.documentElement.classList.add("js");
+var $=function(s){return document.querySelector(s)},RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
+$("#tg").onclick=function(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=d?"light":"dark"};
+addEventListener("scroll",function(){var h=document.documentElement;$("#pg").style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%"},{passive:true});
+var roles=["Full-Stack Developer","MERN Stack Engineer","Real-time App Builder"],ri=0,ci=0,del=false,el=$("#role");
+function tick(){var w=roles[ri];ci+=del?-1:1;el.textContent=w.slice(0,ci);var t=del?35:70;if(!del&&ci===w.length){del=true;t=1600}else if(del&&ci===0){del=false;ri=(ri+1)%roles.length;t=300}setTimeout(tick,t)}
+if(!RM)tick();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");var b=e.target.querySelector("[data-n]");if(b)count(b);io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll(".rv").forEach(function(n){io.observe(n)});
+function count(b){var n=+b.dataset.n,d=+b.dataset.d||0,t0=null;function f(t){t0=t0||t;var p=Math.min((t-t0)/900,1);b.textContent=(n*p).toFixed(d);if(p<1)requestAnimationFrame(f)}RM?b.textContent=n.toFixed(d):requestAnimationFrame(f)}
+/* dispatch simulation */
+var NS="http://www.w3.org/2000/svg",svg=$("#sim"),W=480,H=300,start=[[70,70],[410,90],[230,240]],units=[],mk;
+function el2(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e}
+for(var x=40;x<W;x+=40)svg.appendChild(el2("path",{d:"M"+x+" 0V"+H,stroke:"var(--line)"}));
+for(var y=40;y<H;y+=40)svg.appendChild(el2("path",{d:"M0 "+y+"H"+W,stroke:"var(--line)"}));
+mk=el2("g",{});svg.appendChild(mk);
+function reset(){units.forEach(function(u){u.g&&u.g.remove()});units=start.map(function(p,i){var g=el2("g",{}),r=el2("rect",{x:-12,y:-12,width:24,height:24,rx:6,fill:"var(--rt)"}),t=el2("text",{"text-anchor":"middle",y:4,fill:"var(--on)","font-size":11,"font-weight":700});t.textContent="A"+(i+1);g.append(r,t);svg.appendChild(g);var u={id:"A"+(i+1),x:p[0],y:p[1],busy:false,g:g,r:r};pos(u);return u});mk.innerHTML="";$("#log").innerHTML="<li>Click the map to report an emergency.</li>"}
+function pos(u){u.g.setAttribute("transform","translate("+u.x+" "+u.y+")")}
+function say(s){var li=document.createElement("li");li.textContent=s;var l=$("#log");if(l.firstChild&&l.firstChild.textContent.indexOf("Click the map")===0)l.innerHTML="";l.prepend(li);while(l.children.length>5)l.lastChild.remove()}
+function dispatch(x,y){x=Math.round(x/40)*40-20;y=Math.round(y/40)*40-20;x=Math.max(20,Math.min(W-20,x));y=Math.max(20,Math.min(H-20,y));
+var free=units.filter(function(u){return!u.busy});if(!free.length){say("All units busy. Try again shortly.");return}
+var best=free.reduce(function(a,b){return dist(a,x,y)<=dist(b,x,y)?a:b}),sp=RM?400:110;
+var m=el2("g",{transform:"translate("+x+" "+y+")"});m.append(el2("circle",{r:10,fill:"var(--sig)",opacity:.25}),el2("circle",{r:5,fill:"var(--sig)"}));mk.appendChild(m);
+best.busy=true;best.r.setAttribute("fill","var(--sig)");var eta=(dist(best,x,y)/sp).toFixed(1);say(best.id+" assigned. Distance "+Math.round(dist(best,x,y))+" px, ETA "+eta+" s");
+var pts=[[best.x,best.y],[x,best.y],[x,y]],L=[Math.abs(x-best.x),Math.abs(y-best.y)],tot=L[0]+L[1],t0=null;
+function f(t){t0=t0||t;var d=Math.min((t-t0)/1000*sp,tot);if(d<=L[0]){best.x=pts[0][0]+Math.sign(x-pts[0][0])*d;best.y=pts[0][1]}else{best.x=x;best.y=pts[1][1]+Math.sign(y-pts[1][1])*(d-L[0])}pos(best);
+if(d<tot)requestAnimationFrame(f);else{say(best.id+" reached the scene.");setTimeout(function(){best.busy=false;best.r.setAttribute("fill","var(--rt)");m.remove();say(best.id+" is available again.")},1200)}}
+requestAnimationFrame(f)}
+function dist(u,x,y){return Math.abs(u.x-x)+Math.abs(u.y-y)}
+svg.addEventListener("click",function(e){var r=svg.getBoundingClientRect();dispatch((e.clientX-r.left)/r.width*W,(e.clientY-r.top)/r.height*H)});
+$("#rnd").onclick=function(){dispatch(Math.random()*W,Math.random()*H)};$("#rst").onclick=reset;reset();
+
+</script>
+</body>
+</html>
